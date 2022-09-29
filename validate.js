@@ -11,12 +11,7 @@ export function estadoBotao(input){
 }
 
 export function valida(input){
-
-   
-
     const tipoDeInput = input.dataset.tipo;
-
-
 
     if(validadores[tipoDeInput]){
         
@@ -31,10 +26,6 @@ export function valida(input){
         input.parentElement.querySelector('.formcontato__erro--nome').innerHTML = mostraMenssageErro(tipoDeInput,input)
     }
 }
-
-
-
-
 
 const tiposDeErro = [
     'valueMissing',
@@ -117,48 +108,3 @@ function validaMensagem(input){
     input.setCustomValidity(erro);
 }
 
-
-
-/*Seu JavaScript de validação aqui
-
-
-
-
-const nome = document.querySelector("#Nome");
-
-
-
-nome.addEventListener('blur', (evento) =>  {
-    validaNome(evento.target);
-});
-
-
-
- = document.querySelector("#erro");
-const botao = document.querySelector("#botao");
-
-botao.addEventListener("click", (evento) =>{
-    evento.preventDefault();
-
-    const nameValue = nome.value;
-   
-
-    if(nameValue == ""){
-        erro.textContent ="Campo vazio preencha com seu nome";
-
-        setTimeout(() =>{
-            erro.textContent = ""
-        }, 3000);
-
-    }
-
-    alert(nameValue.length)
-    
-    if(nameValue.length > 35){
-        erro.textContent ="Não ultrapasse o tamanho";
-
-        setTimeout(() =>{
-            erro.textContent = ""
-        }, 3000);
-    }.textContent = "Campo vazio preencha com seu nome"
-});*/
